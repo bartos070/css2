@@ -33,3 +33,50 @@
     height: 400px;
     display: inline-block;
 }
+/*skalowanie*/
+#skalowany_outer {
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+}
+#skalowany {
+    background: url(https://vignette1.wikia.nocookie.net/wiedzmin/images/9/97/Smok_z%C5%82oty.jpg/revision/latest?cb=20101014220647) no-repeat;
+    background-size: cover;
+    width: 400px;
+    height: 400px;
+    transition: all 0.5s;
+}
+#skalowany:hover {
+    transform: scale(1.5);
+}
+/*animacje*/
+#animowany {
+    width: 400px;
+    height: 400px;
+    background-color: limegreen;
+    animation-name: changeWidth;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes changeWidth {
+    0%, 100% {
+        width: 1000px
+    }
+    
+    50% {
+        width: 400px
+    }
+}
+/*
+@keyframes changeWidth {
+    from {
+        width: 1000px
+    }
+    
+    to {
+        width: 400px
+    }
+}
+*/
